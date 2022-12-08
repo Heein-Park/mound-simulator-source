@@ -1,0 +1,34 @@
+{
+    "storagePermission" : {
+        "type" : "Web Storage",
+        "duration" : "Local Storage(Persistent across sessions)",
+        "purpose" : "Strictly Necessary",
+        "provenance" : "First Party",
+        "controller" : "moundsimulator.io",
+        "description": "This integer data remembers a user's selection to allow Web Storage to reserve any data. If this data sets as true, then any user's preference that uses Web Storage API will remain in Web Storage. Regardless of your choice, the website will hide the pop-up banner that asks a user the Web Storage permission on the next visit."
+    },
+    "replaySetting" : {
+        "type" : "Web Storage",
+        "duration" : "Local Storage(Persistent across sessions)",
+        "purpose" : "Functional",
+        "provenance" : "First Party",
+        "controller" : "moundsimulator.io",
+        "description" : "This boolean data will remember a user's in-game preference to see a replay of each pitching. (Gameplay Option)"
+    },
+    "pitchTraceDisplay" : {
+        "type" : "Web Storage",
+        "duration" : "Local Storage(Persistent across sessions)",
+        "purpose" : "Functional",
+        "provenance" : "First Party",
+        "controller" : "moundsimulator.io",
+        "description" : "This string data will remember a user's in-game preference on how the user graphic interface displays a mouse trace during pitching. (Gameplay Option)"
+    },
+    "toggleGuide" : {
+        "type" : "Web Storage",
+        "duration" : "Local Storage(Persistent across sessions)",
+        "purpose" : "Functional",
+        "provenance" : "First Party",
+        "controller" : "moundsimulator.io",
+        "description" : "This boolean data will remember a user's in-game preference whether to show gameplay guides for a plyaer during pitching. (Gameplay Option)"
+    }
+}

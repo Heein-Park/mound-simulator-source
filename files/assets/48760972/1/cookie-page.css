@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital@0;1&display=swap');
+
+.container {
+    color: #fff;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 17px;
+    font-weight: 100;
+    line-height: 1.4em;
+    
+    background-color: #000;
+    
+    position: absolute;
+    bottom: 0em;
+    left: 0em;
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    align-items: stretch;
+    
+    max-width: 900px;
+}
+
+.buttons {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    align-items: stretch;
+    justify-content: space-around;
+}
+
+.overview {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    align-items: stretch;
+}
+
+.text {
+    max-width: 800px;
+    flex: 3;
+}
+
+.padding {
+    padding: 0.6em;
+}
+
+button {
+    background-color: inherit;
+    border: none;
+    
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+}
+
+button:active {
+    background-color: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+}
+
+.banner-button {
+    flex: 1;
+}
+
+.anchorLike {
+    display: inline;
+    appearance: none;
+    text-decoration: underline;
+    color: #7FFF00;
+        padding: 0 0 0 0;
+}
+
+.vertical-padding {
+    padding-block-start: 0.8em;
+    padding-block-end: 0.8em;
+}
+
+p {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+p:not(:last-child) {
+    margin-block-end: 0.8em;
+}
+
+h1 {
+    font-size:1.2em;
+    margin-block-start: 0em;
+    margin-block-end: 0.8em;
+}
+
+h2 {
+    font-size:1.0em;
+    margin-block-start: 0em;
+    margin-block-end: 0.6em;
+}
+
+ul li:not(:last-child) {
+    margin-block-end: 0.4em;
+}
+
+#option .list .item {
+    display: flex;
+    flex-direction: row;
+    align-content: stretch;
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+}
+
+#option .list .item .category {
+    align-self: center;
+    flex-grow: 1;
+}
+
+.list {
+    width:100%;
+    border-collapse: collapse;
+    margin-block-end: 0.8em;
+}
+
+.list .item {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    align-content: stretch;
+    border-bottom: solid thin white;
+    border-top: solid thin white;
+    padding-inline-start: 1em;
+    padding-inline-end: 1em;
+    padding-block-start: 1em;
+    padding-block-end: 1em;
+}
+
+.list .item:not(:last-child) {
+    border-bottom: none;
+    border-top: solid thin white;
+}
+
+.list .item .row {
+    padding-block-start: 0.4em;
+    padding-block-end: 0.4em;
+    flex:1;
+}
+
+.list .item .keys {
+    flex-basis: 100px;
+}
+
+.list .item .values {
+    flex-basis: 120px;
+    flex-grow: 6;
+}
+
+.list .item .column {
+    padding-block-start: 0.4em;
+    padding-block-end: 0.4em;
+    padding-inline-start: 0.4em;
+    padding-inline-end: 0.4em;
+    display: flex;
+}
+
+.detail {
+    height: auto;
+    animation-duration: 1s;
+    overflow-y: auto;
+    max-height: 0px;
+}
+
+.detail.expand {
+    max-height: 400px;
+    animation-name: expand;
+}
+
+.detail.fold {
+    max-height: 0px;
+    animation-name: fold;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 54px;
+    height: 26px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: white solid 2px;
+    transition-property: transform, background-color;
+    transition-duration: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition-property: transform, background-color;
+    transition-duration: .4s;
+}
+
+input:checked + .slider {
+    background-color: #aaa;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(28px);
+    -ms-transform: translateX(28px);
+    transform: translateX(28px);
+    background-color: #444;
+}
+
+.slider.round {
+    border-radius: 26px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+input[disabled] + .slider {
+    background-color: #444;
+}
+
+input[disabled] + .slider:before {
+    background-color: black;
+}
+
+.withTop {
+    display:flex;
+    justify-content: space-between;
+}
+
+.top {
+    flex-shrink: 1;
+    padding-inline-start: 0.2em;
+    padding-inline-end: 0.2em;
+}
+
+@media screen and (max-width: 378px) {
+    .list .item .row {
+    }
+
+    .list .item .keys {
+        flex: 1 1 0;
+    }
+
+    .list .item .values {
+        flex: 1 1 0;
+    }
+
+    .list .item .column {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .container {
+        font-size: 15px
+    }
+    
+    .buttons {
+        flex-direction: row;
+    }
+    
+    .overview {
+        flex-direction: column;
+    }
+    
+    .button {
+        flex-basis: 6em;
+    }
+}
+
+@keyframes expand {
+  from {
+    max-height: 0px;
+  }
+
+  to {
+    max-height: 400px;
+  }
+}
+
+@keyframes fold {
+  from {
+    max-height: 400px;
+  }
+
+  to {
+    max-height: 0px;
+  }
+}

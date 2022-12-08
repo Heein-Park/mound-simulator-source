@@ -1,0 +1,12 @@
+{
+    "onMouse" : {
+        "none" : "Click and Hold to grab it",
+        "press" : "Drag fast and Release to Pitch",
+        "moreVel" : "Need More Speed to Pitch"
+    },
+    "onTouch" : {
+        "none" : "Touch to grab it",
+        "press" : "Drag fast and Release to Pitch",
+        "moreVel" : "Need More Speed to Pitch"
+    }
+}
